@@ -5,7 +5,7 @@ unless File.exists?("/Applications/Alfred\ 2.app")
   end
 
   execute "unzip alfred2" do
-    command "unzip #{Chef::Config[:file_cache_path]}/Alfred_2.0.7_205.zip Alfred\ 2.app/* -d /Applications/"
+    command "unzip #{Chef::Config[:file_cache_path]}/Alfred_2.0.7_205.zip 'Alfred 2.app'/* -d /Applications/"
     user node['current_user']
     group "admin"
   end
